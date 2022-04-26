@@ -1,4 +1,6 @@
+import pyperclip
 import unittest
+
 from credentials import Credentials
 class TestContact(unittest.TestCase):
 
