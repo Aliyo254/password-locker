@@ -7,6 +7,15 @@ By Alinur Ali
 you require a browser preferably chrome to run this site.Copy the link to clone into the project and open it with a text-editor to view
 ## BUILT WITH
 - python
+### Running the Application
+* To run the application, open the cloned file in the terminal and run the following commands:
+
+       $ chmod +x run.py
+       $ ./run.py
+* To run test for the application in the vs code 
+
+       $ python 3 run.py
+       
 ## CONTACT DETAILS
 in case of any problems when accesing my site feel free to contact me on alinurali254@gmail.com your feedback will be highly appreciated
 ## LICENCE
