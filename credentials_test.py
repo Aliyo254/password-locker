@@ -14,7 +14,7 @@ class TestContact(unittest.TestCase):
         '''
         set up method that runs before each Test
         '''
-        self.new_credentials = Credentials("twitter","billowbashir","123456789")
+        self.new_credentials = Credentials("twitter","alinurali","123456789")
     def tearDown(self):
         '''
         method that does clean up after each test case has run.
@@ -22,7 +22,7 @@ class TestContact(unittest.TestCase):
         Credentials.credentials_list=[]
     def test_init(self):
         self.assertEqual(self.new_credentials.platform_name,"twitter")
-        self.assertEqual(self.new_credentials.username,"billowbashir")
+        self.assertEqual(self.new_credentials.username,"alinurali")
         self.assertEqual(self.new_credentials.password,"123456789")
     def test_save_credentials(self):
         '''
