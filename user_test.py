@@ -1,4 +1,6 @@
 import unittest
+
+import pyperclip
 from user import User
 class TestContact(unittest.TestCase):
     '''
@@ -16,7 +18,7 @@ class TestContact(unittest.TestCase):
         User.user_list=[]
     def test_init(self):
             self.assertEqual(self.new_user.name,"alinur")
-            self.assertEqual(self.new_user.username,"ali")
+            self.assertEqual(self.new_user.email,"ali")
             self.assertEqual(self.new_user.password,"123456789")
     def test_save_user(self):
         '''
@@ -24,5 +26,14 @@ class TestContact(unittest.TestCase):
         '''
         self.new_user.save_user()
         self.assertEqual(len(User.user_list),1)
+
+       
+    def test_copy_email(self):
+        '''
+        Test to confirm that we are copying the email address from a found username
+        '''
+        self.new_user.save_user()
+        User.copy_email("ali")
+        User.assertEqual(self.new_user.email,pyperclip.paste())
 if __name__ =='__main__':
     unittest.main()

@@ -1,3 +1,5 @@
+import pyperclip
+import string
 class Credentials:
     '''
     class that generates new instance of the credential details
@@ -20,7 +22,7 @@ class Credentials:
         '''
         Credentials.credentials_list.remove(self)
     @classmethod
-    def find_credentials_by_platform_name(cls,platform_name):
+    def find_by_platform_name(cls,platform_name):
         '''
         method to search through the credentials_listby platform name and return the credentials
         '''
@@ -42,7 +44,8 @@ class Credentials:
         method to display list of saved credentials
         '''
         return cls.credentials_list
-    # @classmethod
-    # def copy_password(cls,platform_name):
-    #     credentials_found = Credentials.find_credentials_by_platform_name(platform_name)
-    #     pyperclip.copy(credentials_found.password)
+    @classmethod
+    def copy_username(cls,platform_name):
+         credentials_found = Credentials.find_by_platform_name(platform_name)
+         pyperclip.copy(credentials_found.username)
+    
